@@ -9,9 +9,11 @@ import fastClick from 'fastclick'
 
 
 // 引入清除默认样式的css文件 reset.css
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 解决一像素边框的问题
-import './assets/styles/border.css'
+import 'styles/border.css'
+// 引入iconfont.css
+import 'styles/iconfont.css'
 
 
 
