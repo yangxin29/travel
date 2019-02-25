@@ -6,10 +6,11 @@
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
 
-<style>
+<style lang="stylus">
+// swiper 圆点的激活样式
 
 </style>
