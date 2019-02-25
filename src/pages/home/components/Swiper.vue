@@ -18,16 +18,14 @@ export default {
       swiperOption: {
         // some swiper options/callbacks
         // 所有的参数同 swiper 官方 api 参数
-        // ...
+        pagination:".swiper-pagination",   //  分页功能
         loop: true,
-        autoplay: {
-          delay: 3000, //间隔3秒自动滑动
-          disableOnInteraction: false
-        },
-        //  分页功能
-        pagination: {
-          el: ".swiper-pagination"
-        }
+        // autoplay: {
+        // //   delay: 3000, //间隔3秒自动滑动
+        //   disableOnInteraction: false
+        // },
+        autoplay:3000,
+        autoplayDisableOnInteraction: false  //用户操作swiper之后，是否禁止autoplay。默认为true：停止。 
       },
       //   图片列表
       swiperList: [
