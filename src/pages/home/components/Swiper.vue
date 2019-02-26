@@ -18,24 +18,24 @@ export default {
       swiperOption: {
         // some swiper options/callbacks
         // 所有的参数同 swiper 官方 api 参数
-        pagination:".swiper-pagination",   //  分页功能
+        pagination: ".swiper-pagination", //  分页功能
         loop: true,
         // autoplay: {
         // //   delay: 3000, //间隔3秒自动滑动
         //   disableOnInteraction: false
         // },
-        autoplay:3000,
-        autoplayDisableOnInteraction: false  //用户操作swiper之后，是否禁止autoplay。默认为true：停止。 
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
       },
       //   图片列表
       swiperList: [
         {
-          id: 1,
+          id: "001",
           url:
             "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/a211765c0bb579b18c6e7d6d75997a48.jpg_750x200_b6921fa6.jpg"
         },
         {
-          id: 2,
+          id: "002",
           url:
             "https://imgs.qunarzz.com/piao/fusion/1706/b8/a8e8ff02b094c802.jpg_750x200_ddaec8e5.jpg"
         },
@@ -55,6 +55,12 @@ export default {
 .container >>> .swiper-pagination-bullet-active {
   background: #ffffff !important;
 }
+// 圆点大小
+.container >>> .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+}
+
 
 .container {
   overflow;
