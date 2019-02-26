@@ -4,7 +4,7 @@
        <div class="title">周末去哪儿</div>
        <ul>
            <!-- 每一个推荐 -->
-           <li class="item" v-for="item in recommendList" :key="item.id">
+           <li class="item" v-for="item in list" :key="item.id">
                <!-- 图片 -->
                <div class="item-img-wrapper">
                    <img class="item-img" :src="item.imgUrl" alt="图片不见了">
@@ -15,7 +15,6 @@
                    <p class="item-title">{{item.title}}</p>
                    <p class="item-desc">{{item.desc}}</p>
                </div>
-
            </li>
        </ul>
     </div>
@@ -23,28 +22,10 @@
 
 <script>
 export default {
-  name: "HomeWeekend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: "001",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/source/1505/fb/302620ed8350f8.jpg_r_640x214_25a07cb4.jpg",
-          title: "长沙必打卡",
-          desc: "到了长沙，一定要到这些地方走走"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/source/1811/88/8d3b492ebf0b16.jpg_r_640x214_7b3a281d.jpg",
-          title: "邂逅凤凰城",
-          desc:
-            "凤凰古城一个古老而神秘的地方，风景秀丽，历史悠久，人杰地灵，名贤辈出，名胜古迹众多"
-        }
-      ]
-    };
-  }
+  props: {
+    list: Array
+  },
+  name: "HomeWeekend"
 };
 </script>
 
@@ -53,7 +34,6 @@ export default {
 
 // 标题
 .title {
-  margin-top: 0.2rem;
   padding-left: 0.2rem;
   line-height: 0.8rem;
   background: #eee;
@@ -66,7 +46,7 @@ export default {
   .item-img-wrapper {
     overflow: hidden;
     height: 0;
-    padding-bottom: 33.9%;
+    padding-bottom: 37.09%;
 
     // 图片
     .item-img {

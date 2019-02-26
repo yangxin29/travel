@@ -1,9 +1,9 @@
 <template>
     <div class="container">       
-        <swiper :options="swiperOption">
+        <swiper :options="swiperOption" v-if="showSwiper">
             <!-- slides -->
-            <swiper-slide v-for="item in swiperList" :key="item.id">
-                <img class="swiper-img" :src="item.url" alt="图片不见了">
+            <swiper-slide v-for="item in list" :key="item.id" >
+                <img class="swiper-img" :src="item.imgUrl" alt="图片不见了">
             </swiper-slide>
             <!-- Optional controls -->
             <div class="swiper-pagination"  slot="pagination"></div>
@@ -13,6 +13,9 @@
 
 <script>
 export default {
+  props:{
+    list:Array
+  },
   data() {
     return {
       swiperOption: {
@@ -27,25 +30,13 @@ export default {
         autoplay: 3000,
         autoplayDisableOnInteraction: false //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
       },
-      //   图片列表
-      swiperList: [
-        {
-          id: "001",
-          url:
-            "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/a211765c0bb579b18c6e7d6d75997a48.jpg_750x200_b6921fa6.jpg"
-        },
-        {
-          id: "002",
-          url:
-            "https://imgs.qunarzz.com/piao/fusion/1706/b8/a8e8ff02b094c802.jpg_750x200_ddaec8e5.jpg"
-        },
-        {
-          id: 3,
-          url:
-            "https://imgs.qunarzz.com/piao/fusion/1706/b9/6b91b49794f46402.jpg_750x200_d7f254e2.jpg"
-        }
-      ]
     };
+  },
+  computed:{
+    showSwiper(){
+      // 监听list数组长度，解决轮播图首次页码显示问题
+      return this.list.length
+    }
   }
 };
 </script>

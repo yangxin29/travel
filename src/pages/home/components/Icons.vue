@@ -20,81 +20,22 @@
 
 <script>
 export default {
+  props:{
+    list:Array
+  },
   data() {
     return {
       swiperOption: {
         // pagination: ".swiper-pagination" //  分页功能
       },
       //   图片数据列表
-      iconList: [
-        {
-          id: "001",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          desc: "景点门票"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-          desc: "一日游"
-        },
-        {
-          id: "003",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-          desc: "长沙必游"
-        },
-        {
-          id: "004",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
-          desc: "亲子游"
-        },
-        {
-          id: "005",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
-          desc: "游乐场"
-        },
-        {
-          id: "006",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-          desc: "动植物园"
-        },
-        {
-          id: "007",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "自然风光"
-        },
-        {
-          id: "008",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/b8/c5dcdb58deec2402.png",
-          desc: "湘西凤凰"
-        },
-        {
-          id: "009",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
-          desc: "橘子洲"
-        },
-        {
-          id: "010",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png",
-          desc: "泡温泉"
-        }
-      ]
     };
   },
   //   计算属性
   computed: {
     pages() {
       const pages = [];
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8); //计算得出页码(利用向下取整)
         if (!pages[page]) {
           pages[page] = []; //判断二维数组里面的小数组是否为空，没有则让小数组为空数组

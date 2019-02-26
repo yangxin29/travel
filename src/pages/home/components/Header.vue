@@ -12,14 +12,18 @@
         </div>
         <!-- 右侧城市图标 -->
         <div class="header-rigth">
-            城市
+            {{this.city}}
             <span class="iconfont right">&#xe64a;</span>
         </div>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props:{
+    city:String
+  }
+};
 
 //  1rem = html font-size = 50px ,但是设计图是2倍图
 </script>
