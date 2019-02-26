@@ -125,26 +125,30 @@ export default {
 // width 6px
 // height 6px
 // }
-.icon {
-  float: left;
-  width: 25%;
-  height: 0;
-  padding-bottom: 25%;
-  box-sizing: border-box;
+.container {
+  margin-top: 0.1rem;
 
-  .icon-img {
-    display: block;
-    width: 1.1rem;
-    height: 1.1rem;
-    margin: 0.1rem auto;
-  }
+  .icon {
+    float: left;
+    width: 25%;
+    height: 0;
+    padding-bottom: 25%;
+    box-sizing: border-box;
 
-  // 说明文字样式
-  .text {
-    margin-top: 0.1rem;
-    text-align: center;
-    color: $TextColor;
-    ellipsis();
+    .icon-img {
+      display: block;
+      width: 1.1rem;
+      height: 1.1rem;
+      margin: 0.1rem auto;
+    }
+
+    // 说明文字样式
+    .text {
+      margin-top: 0.1rem;
+      text-align: center;
+      color: $TextColor;
+      ellipsis();
+    }
   }
 }
 </style>
