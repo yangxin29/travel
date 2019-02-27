@@ -58,7 +58,6 @@ export default {
       // 判断是否有数据
       if (date.ret && date) {
         const data = date.data;
-        console.log(data);
         // 城市名称数据
         this.city=data.city
         // 轮播图图片的数据

@@ -14,79 +14,19 @@
             </div>
             <!-- 热门城市 -->
             <div class="area">
-                <div class="title border-topbottom">你的位置</div>
+                <div class="title border-topbottom">热门城市</div>
                 <div class="button-list">
-                    <div class="button-wrapper">
-                        <div class="button">长沙</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">长沙</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">长沙</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">长沙</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">长沙</div>
+                    <div class="button-wrapper" v-for="item in hot" :key="item.id">
+                        <div class="button">{{item.name}}</div>
                     </div>
                 </div>
             </div>
             <!-- 城市选项列表 -->
-            <div class="area">
-                <div class="title border-topbottom">A</div>
+            <div class="area" v-for="(list,key) in cit" :key="key">
+                <div class="title border-topbottom">{{key}}</div>
                 <!-- 城市列表项 -->
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-            </div>
-                    <!-- 城市选项列表 -->
-            <div class="area">
-                <div class="title border-topbottom">A</div>
-                <!-- 城市列表项 -->
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-            </div>
-                    <!-- 城市选项列表 -->
-            <div class="area">
-                <div class="title border-topbottom">A</div>
-                <!-- 城市列表项 -->
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-            </div>
-                    <!-- 城市选项列表 -->
-            <div class="area">
-                <div class="title border-topbottom">A</div>
-                <!-- 城市列表项 -->
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
-                </div>
-                <div class="item-list border-bottom">
-                    <div class="item"> 阿坝藏族羌族自治州</div>
+                <div class="item-list border-bottom" v-for="item in list" :key="item.id">
+                    <div class="item"> {{item.name}}</div>
                 </div>
             </div>
         </div>
@@ -98,9 +38,15 @@
 import BScroll from 'better-scroll'
 
 export default {
+    props:{
+      cit:Object,
+      hot:Array
+    },
     mounted(){
         // better-scroll 的用法
-        let scroll = new BScroll(this.$refs.wrapper)
+        let scroll = new BScroll(this.$refs.wrapper,{
+          click:true
+        })
     }
 };
 </script>

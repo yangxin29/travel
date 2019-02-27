@@ -5,9 +5,9 @@
          <!-- 城市信息页面 搜索框组件 -->
          <city-search></city-search>
          <!-- 城市信息 城市列表页面组件 -->
-         <city-list></city-list>
+         <city-list :cit="cities" :hot="hotCities"></city-list>
          <!-- 城市信息 城市字母表 -->
-         <city-alphabet></city-alphabet>
+         <city-alphabet :alpdata="cities"></city-alphabet>
     </div>
 </template>
 
@@ -20,13 +20,43 @@ import CitySearch from './components/Search.vue'
 import CityList from './components/List.vue'
 // 引入 CityAlphabet 组件 (字母表)
 import CityAlphabet from './components/Alphabet.vue'
-   export default {
+ 
+//  引入 axios
+import axios from 'axios'
+  export default {
         components:{
             CityHeader,
             CitySearch,
             CityList,
             CityAlphabet
+        },
+        data() {
+            return {
+                cities:{},
+                hotCities:[]
+            }
+        },
+        // 方法
+        methods:{
+            gitCityData(){
+                axios.get('api/city.json').then(this.gitCityDataSucc)
+            },
+            gitCityDataSucc(res){
+                res = res.data
+                if(res.ret&&res.data){
+                    const data = res.data
+                    
+                    this.hotCities= data.hotCities
+                    this.cities = data.cities
+                    console.log(data)
+                }
+            }
+         },
+        //  生命周期钩子 挂载到实例上
+        mounted(){
+           this.gitCityData()
         }
+       
     }
 </script>
 

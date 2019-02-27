@@ -1,14 +1,17 @@
 <template>
-    <ul class="list">
-         <li class="item">A</li>
-         <li class="item">A</li>
-         <li class="item">A</li>
-         <li class="item">A</li> 
+    <ul class="list" >
+         <li class="item" v-for="(item,key) in alpdata" :key="key">
+             {{key}}
+         </li>
     </ul>
 </template>
 
 <script>
-export default {};
+export default {
+    props:{
+        alpdata:Object
+    }
+};
 </script>
 
 <style lang="stylus" scoped>
