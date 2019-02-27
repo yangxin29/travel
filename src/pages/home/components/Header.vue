@@ -11,17 +11,19 @@
             输入 城市/景点/游玩主题
         </div>
         <!-- 右侧城市图标 -->
-        <div class="header-rigth">
-            {{this.city}}
-            <span class="iconfont right">&#xe64a;</span>
-        </div>
+        <router-link to="/city">
+          <div class="header-rigth">
+              {{this.city}}
+              <span class="iconfont right">&#xe64a;</span>
+          </div>
+        </router-link>
     </div>
 </template>
 
 <script>
 export default {
-  props:{
-    city:String
+  props: {
+    city: String
   }
 };
 
@@ -30,8 +32,7 @@ export default {
 
 <style lang="stylus" scoped>
 // 引入定义的varibles文件
-@import  '~styles/varibles.styl'
-
+@import '~styles/varibles.styl';
 
 // header区域的盒子
 .header {
@@ -39,8 +40,8 @@ export default {
   align-items: center;
   width: 100%;
   height: 0.86rem;
-  //使用varibles里面的变量
-  background: $bgColor;   
+  // 使用varibles里面的变量
+  background: $bgColor;
   color: #ffffff;
 
   .header-left {
@@ -63,6 +64,7 @@ export default {
     color: #ccc;
     border-radius: 0.1rem;
     box-sizing: border-box;
+
     // 搜索图标样式
     .center {
       margin-right: 0.1rem;
@@ -76,10 +78,12 @@ export default {
     justify-content: center;
     width: 1.24rem;
     height: 100%;
+    color: #fff;
+
     // 图标样式
-    .right{
-        font-size .24rem
-        margin-left .1rem
+    .right {
+      font-size: 0.24rem;
+      margin-left: 0.1rem;
     }
   }
 }
