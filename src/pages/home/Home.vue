@@ -27,6 +27,8 @@ import HomeWeekend from "./components/Weekend.vue";
 
 // 引入axsoi
 import axsoi from "axios";
+//  引入vuex
+import { mapState } from "vuex";
 
 export default {
   components: {
@@ -42,13 +44,17 @@ export default {
       swiperList: [],
       iconsList: [],
       recommendList: [],
-      weekendList: []
+      weekendList: [],
+      lastCity: ""
     };
+  },
+  computed: {
+    ...mapState(["city"])
   },
   methods: {
     gitHomeinfo() {
-      // 发送 axsoi 请求数据
-      axsoi.get("/api/index.json").then(this.gitHomeinfosucc);
+      // 发送 axsoi 请求数据 带上城市的名称请求
+      axsoi.get(`/api/index.json?city=${this.city}`).then(this.gitHomeinfosucc);
     },
     // 获取到数据之后的回调函数
     gitHomeinfosucc(res) {
@@ -72,7 +78,17 @@ export default {
   },
   // create() 组件刚刚创建好，此时发送请求可以节约一部分时间
   created() {
+    this.lastCity = this.city; //保存上一次的城市名称
     this.gitHomeinfo();
+  },
+  //使用keep-alive 会多一个生命周期钩子 页面重新被显示的时候页面重新执行
+  activated() {
+    // 判断城市与上次的城市是否相同，若是不相同则 重新请求页面
+    if (this.lastCity !== this.city) {
+      // 继续保存城市的名称
+      this.lastCity = this.city
+      this.gitHomeinfo();
+    }
   }
 };
 </script>
