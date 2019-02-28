@@ -4,18 +4,22 @@
        <div class="title">热销推荐</div>
        <ul>
            <!-- 每一个推荐 -->
-           <li class="item border-bottom" v-for="item in list" :key="item.id">
-               <!-- 图片 -->
-                <img class="item-img" :src="item.imgUrl" alt="图片不见了">
-               <!-- 右侧文字 -->
-               <div class="item-info">
-                   <!-- 景区标题 -->
-                   <p class="item-title">{{item.title}}</p>
-                   <p class="item-desc">{{item.desc}}</p>
-                   <button class="item-button">查看详情</button>
-               </div>
-
-           </li>
+          <router-link  
+            tag="li" class="item border-bottom" 
+            v-for="item in list" 
+            :key="item.id"
+            :to="'/detail'+ item.id"
+          >
+            <!-- 图片 -->
+              <img class="item-img" :src="item.imgUrl" alt="图片不见了">
+            <!-- 右侧文字 -->
+            <div class="item-info">
+                <!-- 景区标题 -->
+                <p class="item-title">{{item.title}}</p>
+                <p class="item-desc">{{item.desc}}</p>
+                <button class="item-button">查看详情</button>
+            </div>
+          </router-link>
        </ul>
     </div>
 </template>
@@ -23,8 +27,8 @@
 <script>
 export default {
   name: "HomeRecommend",
-  props:{
-    list:Array
+  props: {
+    list: Array
   }
 };
 </script>
@@ -59,7 +63,7 @@ export default {
   // 右侧的内容
   .item-info {
     flex: 1;
-    //技巧，解决溢出问题
+    // 技巧，解决溢出问题
     min-width: 0;
     padding: 0.1rem;
 
@@ -90,6 +94,6 @@ export default {
 
 .item:last-child {
   margin: 0;
-  border:none;
+  border: none;
 }
 </style>
