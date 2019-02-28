@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- 头部组件 -->
-        <home-header :city="city"></home-header>
+        <home-header></home-header>
         <!-- 轮播图组件 -->
         <home-swiper :list="swiperList"></home-swiper>
         <!-- 图标轮播组件 -->
@@ -38,13 +38,12 @@ export default {
     HomeWeekend
   },
   data() {
-      return {
-          city:"",
-          swiperList:[],
-          iconsList:[],
-          recommendList:[],
-          weekendList:[]
-      }
+    return {
+      swiperList: [],
+      iconsList: [],
+      recommendList: [],
+      weekendList: []
+    };
   },
   methods: {
     gitHomeinfo() {
@@ -58,16 +57,16 @@ export default {
       // 判断是否有数据
       if (date.ret && date) {
         const data = date.data;
-        // 城市名称数据
-        this.city=data.city
+        // // 城市名称数据
+        // this.city=data.city
         // 轮播图图片的数据
-        this.swiperList = data.swiperList
+        this.swiperList = data.swiperList;
         // 小图标轮播图
-        this.iconsList = data.iconList
+        this.iconsList = data.iconList;
         // 热销组件的数据
-        this.recommendList = data.recommendList
+        this.recommendList = data.recommendList;
         // 周末去哪儿的数据
-        this.weekendList = data.weekendList
+        this.weekendList = data.weekendList;
       }
     }
   },

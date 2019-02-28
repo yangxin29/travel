@@ -14,6 +14,7 @@
             class="search-item border-bottom"
             v-for="item in list" 
             :key="item.id"
+             @click="headerCity(item.name)"
           >
             {{item.name}}
           </li>
@@ -28,6 +29,7 @@
 <script>
 // 引入better-scroll
 import Bscroll from "better-scroll";
+import { mapMutations } from 'vuex';
 export default {
   props: {
     cities: Object
@@ -73,9 +75,23 @@ export default {
       return !this.list.length
     }
   },
+  methods:{
+    headerCity(cityName) {
+      // 调用dispatch 方法 定义一个change 方法 把cityName 传出去 传到actions中
+      // this.$store.dispatch('changeCity',cityName)
+      // 可以不用通过 actions 来修改数据 直接调用mutations
+      // this.$store.commit("changeCity", cityName);
+      this.changeCity(cityName)
+      // 点击之后跳转到首页
+      this.$router.push("/");
+    },
+    ...mapMutations(['changeCity'])
+  },
   mounted() {
     // console.log(this.$refs.search-box)
-    this.scroll = new Bscroll(this.$refs.search);
+    this.scroll = new Bscroll(this.$refs.search,{
+      click:true
+    });
   }
 };
 </script>

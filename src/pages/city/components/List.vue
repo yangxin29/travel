@@ -8,7 +8,7 @@
                 <div class="title border-topbottom">你的位置</div>
                 <div class="button-list">
                     <div class="button-wrapper">
-                        <div class="button">长沙</div>
+                        <div class="button">{{city}}</div>
                     </div>               
                 </div>
             </div>
@@ -17,7 +17,8 @@
                 <div class="title border-topbottom">热门城市</div>
                 <div class="button-list">
                     <div class="button-wrapper" v-for="item in hot" :key="item.id">
-                        <div class="button">{{item.name}}</div>
+                        <!-- 注册点击事件 获取城市的名称 vuex -->
+                        <div @click="headerCity(item.name)" class="button">{{item.name}}</div>
                     </div>
                 </div>
             </div>
@@ -29,7 +30,12 @@
             >
                 <div class="title border-topbottom">{{key}}</div>
                 <!-- 城市列表项 -->
-                <div class="item-list border-bottom" v-for="item in list" :key="item.id">
+                <div 
+                  class="item-list border-bottom" 
+                  v-for="item in list" 
+                  :key="item.id"
+                  @click="headerCity(item.name)"
+                >
                     <div class="item"> {{item.name}}</div>
                 </div>
             </div>
@@ -40,22 +46,41 @@
 <script>
 // 引入better-scroll 插件
 import BScroll from "better-scroll";
-
+import { mapState, mapMutations } from "vuex";
 export default {
   props: {
     cit: Object,
     hot: Array,
     letter: String
   },
+  computed: {
+    ...mapState({
+      city:'city'
+    })
+  },
   watch: {
-    letter(){
-      if(this.letter){
-          // 字母对应的区域
-          const element = this.$refs[this.letter][0]
-          // better-scroll 插件的api 实现滚动效果(必须是一个dom元素)
-          this.scroll.scrollToElement(element)
+    letter() {
+      if (this.letter) {
+        // 字母对应的区域
+        const element = this.$refs[this.letter][0];
+        // better-scroll 插件的api 实现滚动效果(必须是一个dom元素)
+        this.scroll.scrollToElement(element);
       }
     }
+  },
+  methods: {
+    // 城市名称页面
+    headerCity(cityName) {
+      // 调用dispatch 方法 定义一个change 方法 把cityName 传出去 传到actions中
+      // this.$store.dispatch('changeCity',cityName)
+      // 可以不用通过 actions 来修改数据 直接调用mutations
+      // this.$store.commit("changeCity", cityName);
+      this.changeCity(cityName)
+      // 点击之后跳转到首页
+      this.$router.push("/");
+    },
+    // 把Mutations映射到组件中，名字叫changeCity中
+    ...mapMutations(['changeCity'])
   },
   mounted() {
     // better-scroll 的用法

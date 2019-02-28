@@ -7,7 +7,8 @@ import router from './router'
 import fastClick from 'fastclick'
 // 引入vue-awesome-swiper 插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-
+//  引入Vuex 文件
+import store from './store/index.js'
 
 
 
@@ -32,6 +33,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

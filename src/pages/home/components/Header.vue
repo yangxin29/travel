@@ -13,7 +13,7 @@
         <!-- 右侧城市图标 -->
         <router-link to="/city">
           <div class="header-rigth">
-              {{this.city}}
+              {{city}}
               <span class="iconfont right">&#xe64a;</span>
           </div>
         </router-link>
@@ -21,9 +21,13 @@
 </template>
 
 <script>
+// vuex 的方法
+import { mapState } from "vuex";
 export default {
-  props: {
-    city: String
+  computed: {
+    //  扩展运算符
+    // 把vuex 里面的数据映射到组件的computed属性里
+    ...mapState(["city"])
   }
 };
 
@@ -76,8 +80,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.24rem;
+    min-width: 1.04rem;
     height: 100%;
+    padding: 0.1rem;
     color: #fff;
 
     // 图标样式

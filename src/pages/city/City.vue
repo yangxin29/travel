@@ -46,7 +46,6 @@ import axios from 'axios'
                 res = res.data
                 if(res.ret&&res.data){
                     const data = res.data
-                    
                     this.hotCities= data.hotCities
                     this.cities = data.cities
                 }
