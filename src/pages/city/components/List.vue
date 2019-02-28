@@ -22,7 +22,11 @@
                 </div>
             </div>
             <!-- 城市选项列表 -->
-            <div class="area" v-for="(list,key) in cit" :key="key">
+            <div class="area" 
+                 v-for="(list,key) in cit" 
+                 :key="key"
+                 :ref="key"
+            >
                 <div class="title border-topbottom">{{key}}</div>
                 <!-- 城市列表项 -->
                 <div class="item-list border-bottom" v-for="item in list" :key="item.id">
@@ -35,19 +39,30 @@
 
 <script>
 // 引入better-scroll 插件
-import BScroll from 'better-scroll'
+import BScroll from "better-scroll";
 
 export default {
-    props:{
-      cit:Object,
-      hot:Array
-    },
-    mounted(){
-        // better-scroll 的用法
-        let scroll = new BScroll(this.$refs.wrapper,{
-          click:true
-        })
+  props: {
+    cit: Object,
+    hot: Array,
+    letter: String
+  },
+  watch: {
+    letter(){
+      if(this.letter){
+          // 字母对应的区域
+          const element = this.$refs[this.letter][0]
+          // better-scroll 插件的api 实现滚动效果(必须是一个dom元素)
+          this.scroll.scrollToElement(element)
+      }
     }
+  },
+  mounted() {
+    // better-scroll 的用法
+    this.scroll = new BScroll(this.$refs.wrapper, {
+      click: true
+    });
+  }
 };
 </script>
 

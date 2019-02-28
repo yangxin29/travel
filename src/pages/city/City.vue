@@ -5,9 +5,9 @@
          <!-- 城市信息页面 搜索框组件 -->
          <city-search></city-search>
          <!-- 城市信息 城市列表页面组件 -->
-         <city-list :cit="cities" :hot="hotCities"></city-list>
+         <city-list :cit="cities" :hot="hotCities" :letter="letter"></city-list>
          <!-- 城市信息 城市字母表 -->
-         <city-alphabet :alpdata="cities"></city-alphabet>
+         <city-alphabet :alpdata="cities" @change="headerLetterChange"></city-alphabet>
     </div>
 </template>
 
@@ -33,7 +33,8 @@ import axios from 'axios'
         data() {
             return {
                 cities:{},
-                hotCities:[]
+                hotCities:[],
+                letter:'',
             }
         },
         // 方法
@@ -48,8 +49,12 @@ import axios from 'axios'
                     
                     this.hotCities= data.hotCities
                     this.cities = data.cities
-                    console.log(data)
                 }
+            },
+            // 监听change事件
+            headerLetterChange(letter){
+                // 将获取到的letter 传递给 list.vue 组件
+                this.letter = letter
             }
          },
         //  生命周期钩子 挂载到实例上
