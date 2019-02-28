@@ -84,15 +84,15 @@ export default {
 @import '~styles/varibles.styl';
 
 .list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 1.78rem;
   right: 0;
   bottom: 0;
   width: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .item {
     line-height: 0.4rem;

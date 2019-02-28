@@ -3,7 +3,7 @@
         <!-- 城市信息页面头部 城市管理部分 -->
          <city-header></city-header>
          <!-- 城市信息页面 搜索框组件 -->
-         <city-search></city-search>
+         <city-search :cities="cities"></city-search>
          <!-- 城市信息 城市列表页面组件 -->
          <city-list :cit="cities" :hot="hotCities" :letter="letter"></city-list>
          <!-- 城市信息 城市字母表 -->
