@@ -27,7 +27,10 @@ export default {
     data() {
         return {
             bannerShow:false,
-            imges:['http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg']
+            imges:[
+                'http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg',
+                'http://img1.qunarzz.com/sight/p0/1505/57/579b6c97900745db.water.jpg_600x330_a7a104d2.jpg'
+                ]
         }
     },
     methods:{
@@ -35,7 +38,7 @@ export default {
             this.bannerShow = true
         },
         // 点击取消画廊事件
-        headerGallaryClick(){
+        headerGallaryClick(e){
             this.bannerShow = false
         }
     }

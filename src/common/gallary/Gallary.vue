@@ -1,5 +1,5 @@
 <template>
-    <div class="container" @click="headelBanerClick">
+    <div class="container" @click="headelBanerClick()">
        <div class="wrapper">
            <swiper :options="swiperOption" >
                 <!-- slides -->
@@ -40,6 +40,7 @@ export default {
   },
   methods:{
       headelBanerClick(){
+         
           //子组件传父组件使用自定义事件，使用$emit方法来触发监听的自定义事件
           this.$emit('close')
       }
