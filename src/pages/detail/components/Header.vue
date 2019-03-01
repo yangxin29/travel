@@ -54,10 +54,10 @@ export default {
   activated() {
     window.addEventListener("scroll", this.headerScroll);
   },
-//   页面即将被替换成新的页面之后触发 deactivated 钩子函数
-  deactivated(){
+  //   页面即将被替换成新的页面之后触发 deactivated 钩子函数
+  deactivated() {
     //   解绑事件，避免在其他的页面中也能触发 scroll 事件
-      window.removeEventListener('scroll',this.headerScroll)
+    window.removeEventListener("scroll", this.headerScroll);
   }
 };
 </script>
@@ -83,6 +83,7 @@ export default {
 }
 
 .header-fixed {
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
