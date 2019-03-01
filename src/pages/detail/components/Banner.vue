@@ -14,12 +14,21 @@
             </div>
         </div>
          <!-- 画廊组件 -->
-        <common-gallary :imges="gallaryImgs" v-show="bannerShow" @close = 'headerGallaryClick'></common-gallary>
+         <fade-animation>
+            <common-gallary 
+               :imges="gallaryImgs" 
+               v-show="bannerShow" 
+               @close = 'headerGallaryClick'
+            >
+            </common-gallary>
+          </fade-animation>
     </div>
 </template>
 
 <script>
 import CommonGallary from "common/gallary/Gallary.vue";
+// 动画组件
+import FadeAnimation from "common/fade/FadeAnimation.vue"
 export default {
   props: {
     sightName: String,
@@ -27,7 +36,8 @@ export default {
     gallaryImgs: Array
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   },
   data() {
     return {
