@@ -27,5 +27,9 @@ export default new Router({
       name:'Detail',
       component:Detail
     }
-  ]
+  ],
+  // 进入新的页面让页面处于顶部（x轴为0，y轴也为0）
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
