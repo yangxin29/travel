@@ -49,7 +49,7 @@ export default {
        if(res.ret&&res.data){
          const data = res.data
         
-        console.log(data)
+        
         //  banner 标题
          this.sightName = data.sightName
         //  banner 图片

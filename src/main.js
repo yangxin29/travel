@@ -9,7 +9,8 @@ import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 //  引入Vuex 文件
 import store from './store/index.js'
-
+//  引入 babel-polyfill 解决真机测试问题
+import 'babel-polyfill'
 
 
 // 引入清除默认样式的css文件 reset.css

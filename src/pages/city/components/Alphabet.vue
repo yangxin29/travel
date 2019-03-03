@@ -4,7 +4,7 @@
              :key="item" 
              :ref="item"
              @click="headerletter"
-             @touchstart = "headerTouchstart"
+             @touchstart.prevent = "headerTouchstart"
              @touchmove = "headerTouchmove"
              @touchend = "headerTouchend"
          >
