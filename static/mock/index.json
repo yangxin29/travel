@@ -1,0 +1,123 @@
+{
+  "ret": true,
+  "data": {
+    "swiperList": [{
+        "id": "0001",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1811/31/da037478f37cf202.jpg_750x200_fe28d396.jpg"
+      },{
+        "id": "0002",
+        "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/a211765c0bb579b18c6e7d6d75997a48.jpg_750x200_b6921fa6.jpg"
+      },{
+        "id": "0003",
+        "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/9f73976e40c4ef845cabe0efc0269ebb.jpg_750x200_aab92b7a.jpg"
+      },{
+        "id": "0004",
+        "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/3cdc880b14b7fc6f9c59e6f0f89b857d.jpg_750x200_f5a7ad47.jpg"
+      },{
+        "id": "0005",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1811/29/2a6b77b6ff72402.jpg_750x200_d4cec568.jpg"
+      },{
+        "id": "0006",
+        "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/f31e841aa64b60e5f5e8b14b8ba92825.jpg_750x200_0baeb58b.jpg"
+      },{
+        "id": "0007",
+        "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/9f73976e40c4ef845cabe0efc0269ebb.jpg_750x200_aab92b7a.jpg"
+      },{
+        "id": "0008",
+        "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/3cdc880b14b7fc6f9c59e6f0f89b857d.jpg_750x200_f5a7ad47.jpg"
+      }],
+    "iconList": [{
+        "id": "0001",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "景点门票"
+      }, {
+        "id": "0002",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+        "desc": "一日游"
+      }, {
+        "id": "0003",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+        "desc": "长沙必游"
+      }, {
+        "id": "0004",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
+        "desc": "亲子游"
+      }, {
+        "id": "0005",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
+        "desc": "游乐场"
+      }, {
+        "id": "0006",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+        "desc": "动植物园"
+      }, {
+        "id": "0007",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
+        "desc": "自然风光"
+      }, {
+        "id": "0008",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/b8/c5dcdb58deec2402.png",
+        "desc": "湘西凤凰"
+      }, {
+        "id": "0009",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
+        "desc": "橘子洲"
+      }, {
+        "id": "0010",
+        "imgUrl": "https://imgs.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png",
+        "desc": "泡温泉"
+      }],
+    "recommendList": [{
+        "id": "0001",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1505/57/579b6c97900745db.water.jpg_200x200_f09770c8.jpg",
+        "title": "橘子洲",
+        "desc": "橘子洲，浮卧于湖南长沙市区湘江之中，绵延十里，以盛产美橘而得名。"
+      }, {
+        "id": "0002",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/201303/04/1ad9f7e93228c5f0c8d65eac.jpg_250x250_d4b28f97.jpg",
+        "title": "爱晚亭",
+        "desc": "爱晚亭的名声在外印证一句亘古不变的哲理：文字的千古流传远胜于物质的客观存在"
+      }, {
+        "id": "0003",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1408/18/af4e8d5427a982540ec265b0daab2971.jpg_250x250_2b221aa9.jpg",
+        "title": "长沙摩天轮",
+        "desc": "湖南省长沙市天心区芙蓉中路近贺龙体育广场"
+      }, {
+        "id": "0004",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/201301/14/c6b64cc6ec60b39e93835fbb.jpg_250x250_2058b408.jpg",
+        "title": "杜甫江阁",
+        "desc": "湖南省长沙市湘江中路二段108号"
+      }, {
+        "id": "0005",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1412/36/0b5ddfc9e04db2b870a84986fa7444a0.water.jpg_250x250_8e923e7f.jpg",
+        "title": "长沙世界之窗",
+        "desc": "湖南省长沙市开福区三一大道485号(靠近湖南广电)"
+      }],
+    "weekendList": [{
+        "id": "0001",
+        "imgUrl": "https://imgs.qunarzz.com/sight/source/1505/fb/302620ed8350f8.jpg_r_640x214_25a07cb4.jpg",
+        "title": "长沙必打卡",
+        "desc": "到了长沙，一定要到这些地方走走"
+      }, {
+        "id": "0002",
+        "imgUrl": "https://imgs.qunarzz.com/sight/source/1711/2b/d4ebbd8337f1ac.jpg_r_640x214_2d4332c1.jpg",
+        "title": "湖南泡汤圣地",
+        "desc": "山谷幽深，泉水潺潺，宜人的自然风光，怡人的田园景色，动人的神话传说，是一处难得的世外桃园"
+      }, {
+        "id": "0003",
+        "imgUrl": "https://imgs.qunarzz.com/sight/source/1811/88/8d3b492ebf0b16.jpg_r_640x214_7b3a281d.jpg",
+        "title": "邂逅凤凰城",
+        "desc": "凤凰古城一个古老而神秘的地方，风景秀丽，历史悠久，人杰地灵，名贤辈出，名胜古迹众多"
+      }, {
+        "id": "0004",
+        "imgUrl": "https://imgs.qunarzz.com/sight/source/1811/b4/71c01c98139cf.jpg_r_640x214_30bac495.jpg",
+        "title": "亲身体验人间仙境",
+        "desc": "天桥天地，绝壁高崖之间的高台，台下深不见底的山涧，天风朗朗，云气翻腾，仙境之感扑面而来"
+      }, {
+        "id": "0005",
+        "imgUrl": "https://imgs.qunarzz.com/sight/source/1505/89/b2beff9f28b0db.jpg_r_640x214_94143396.jpg",
+        "title": "玩味童年",
+        "desc": "幸福之家，快乐成长"
+      }]
+  }
+}
